@@ -132,3 +132,28 @@ body::-webkit-scrollbar {
     height: 1000px;
     margin: 50px 20px;
   }
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Coloca os itens da navbar em coluna */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+  
+    .navlinks {
+      flex-direction: column; /* Coloca os links em coluna */
+      width: 100%; /* Ocupa toda a largura */
+    }
+  
+    .navlinks li {
+      margin: 10px 0; /* Espaçamento entre os itens */
+    }
+  
+    .dropdown-content {
+      position: static; /* Remove o posicionamento absoluto */
+      width: 100%; /* Ocupa toda a largura */
+    }
+  
+    .logo, .logo2 {
+      margin-bottom: 10px; /* Espaçamento abaixo das logos */
+    }
+  }
