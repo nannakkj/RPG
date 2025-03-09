@@ -156,4 +156,15 @@ body::-webkit-scrollbar {
     .logo, .logo2 {
       margin-bottom: 10px; /* Espaçamento abaixo das logos */
     }
+    .imagenscontainer {
+        display: flex;
+        flex-direction: column; /* Coloca as imagens em coluna */
+        align-items: center; /* Centraliza as imagens */
+        gap: 10px; /* Espaçamento entre as imagens */
+      }
+      
+      .imagens {
+        max-width: 100%; /* Ajusta a largura da imagem */
+        height: auto; /* Mantém a proporção */
+      }
   }
