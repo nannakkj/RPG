@@ -1,0 +1,134 @@
+/* Estilo da Navbar */
+body::-webkit-scrollbar {
+    width: 0; /* Esconde a barra de rolagem no Chrome, Safari e Edge */
+    background: transparent; /* Torna o fundo da barra transparente */
+  }
+
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+  }
+  
+  /* Estilo da Logo */
+  .logo {
+    top: 10px;
+    position: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    user-select: none;
+    z-index: 10000000000000;
+  }
+  
+  .logo2 {
+    top: 10px;
+    right: 15px;
+    position: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    user-select: none;
+    z-index: 10000000000000;
+  }
+  
+  /* Menu Principal */
+  .navlinks {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    font-size: 30px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+  }
+  
+  .navlinks li {
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .navlinks a,
+  .navlinks span {
+    font-size: 40px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 0;
+    vertical-align: middle;
+  }
+  
+  .navlinks a:hover {
+    color: #ff8b8b;
+  }
+  
+  /* Estilo para a aba atual */
+  .navlinks .current {
+    color: #ff8b8b; /* Cor diferente para a aba atual */
+    cursor: default; /* Remove o cursor de link */
+  }
+  
+  /* Dropdown */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 10px 0;
+    border-radius: 4px;
+    list-style: none;
+  }
+  
+  .dropdown-content li {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .dropdown-content a {
+    color: rgb(255, 0, 0);
+    padding: 12px 16px;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .dropdown-content span {
+    color: rgb(255, 0, 0);
+    padding: 12px 16px;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #555;
+    color: #ff8b8b;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Estilo para as imagens */
+  .imagenscontainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .imagens {
+    height: 1000px;
+    margin: 50px 20px;
+  }
