@@ -13,8 +13,11 @@ body::-webkit-scrollbar {
     padding: 10px 20px;
     color: white;
     position: relative;
+    z-index: 100000;
   }
-  
+.pagecyber .navbar {
+  height: 120px;
+}
   /* Estilo da Logo */
   .logo {
     top: 10px;
@@ -22,7 +25,7 @@ body::-webkit-scrollbar {
     font-size: 24px;
     font-weight: bold;
     user-select: none;
-    z-index: 10000000000000;
+    z-index: 100000;
   }
   
   .logo2 {
@@ -32,7 +35,7 @@ body::-webkit-scrollbar {
     font-size: 24px;
     font-weight: bold;
     user-select: none;
-    z-index: 10000000000000;
+    z-index: 1000000;
   }
   
   /* Menu Principal */
@@ -49,11 +52,13 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     z-index: 1000;
+    
   }
   
   .navlinks li {
     margin: 0 10px;
     position: relative;
+    z-index: 100000;
   }
   
   .navlinks a,
@@ -66,9 +71,16 @@ body::-webkit-scrollbar {
     margin: 0;
     vertical-align: middle;
   }
-  
+  .pagecyber .navlinks a{
+    color: rgba(0, 255, 255, 0.8);
+    text-shadow: 0 0 4px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.8);
+  }
   .navlinks a:hover {
     color: #ff8b8b;
+    
+  }
+  .pagecyber .navlinks a:hover {
+    color: rgb(139, 166, 255);
   }
   
   /* Estilo para a aba atual */
@@ -131,40 +143,4 @@ body::-webkit-scrollbar {
   .imagens {
     height: 1000px;
     margin: 50px 20px;
-  }
-
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column; /* Coloca os itens da navbar em coluna */
-      align-items: flex-start; /* Alinha os itens à esquerda */
-    }
-  
-    .navlinks {
-      flex-direction: column; /* Coloca os links em coluna */
-      width: 100%; /* Ocupa toda a largura */
-    }
-  
-    .navlinks li {
-      margin: 10px 0; /* Espaçamento entre os itens */
-    }
-  
-    .dropdown-content {
-      position: static; /* Remove o posicionamento absoluto */
-      width: 100%; /* Ocupa toda a largura */
-    }
-  
-    .logo, .logo2 {
-      margin-bottom: 10px; /* Espaçamento abaixo das logos */
-    }
-    .imagenscontainer {
-        display: flex;
-        flex-direction: column; /* Coloca as imagens em coluna */
-        align-items: center; /* Centraliza as imagens */
-        gap: 10px; /* Espaçamento entre as imagens */
-      }
-      
-      .imagens {
-        max-width: 100%; /* Ajusta a largura da imagem */
-        height: auto; /* Mantém a proporção */
-      }
   }
