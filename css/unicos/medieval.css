@@ -158,8 +158,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  width: 200vh;
   z-index: -2; 
   display: flex;
   justify-content: center;
