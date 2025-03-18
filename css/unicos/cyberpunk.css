@@ -45,7 +45,7 @@ html {
   height: 100%;
   background: radial-gradient(
     circle,
-    rgba(0, 255, 255, 0.322),
+    rgba(111, 255, 255, 0.322),
     transparent 70%
   );
   animation: neonPulse 2s ease-in-out infinite;
@@ -83,7 +83,7 @@ html {
   animation: pushScreen 0.1s ease-out;
 }
 .navbar {
-  height: 16vh;
+  height: 12vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,15 +115,16 @@ html {
 }
 
 .navlinks .current {
-  color: rgb(139, 166, 255);
+  color: rgb(22, 60, 185);
+  text-shadow: 0 0 4px rgba(22, 60, 185, 0.247), 0 0 10px rgba(22, 60, 185, 0.212);
   cursor: default;
 }
 
 .navlinks a,
 .navlinks span {
   font-size: 40px;
-  color: rgba(0, 255, 255, 0.8);
-  text-shadow: 0 0 4px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.8);
+  color: rgba(88, 247, 247, 0.8);
+  text-shadow: 0 0 4px rgba(88, 236, 247, 0.8), 0 0 10px rgba(88, 247, 247, 0.8);
   text-decoration: none;
   padding: 10px;
   margin: 0;
@@ -132,7 +133,8 @@ html {
 }
 
 .navlinks a:hover {
-  color: rgb(139, 166, 255);
+  color: rgb(22, 60, 185);
+  text-shadow: 0 0 4px rgba(22, 60, 185, 0.247), 0 0 10px rgba(22, 60, 185, 0.212);
 }
 
 /* Dropdown */
@@ -159,8 +161,8 @@ html {
 
 .dropdown-content a,
 .dropdown-content span {
-  color: rgba(0, 255, 255, 0.8);
-  text-shadow: 0 0 4px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.8);
+  color: rgba(88, 247, 247, 0.8);
+  text-shadow: 0 0 4px rgba(88, 247, 247, 0.8), 0 0 10px rgba(88, 247, 247, 0.8);
   padding: 12px 16px;
   font-size: 20px;
   white-space: nowrap;
@@ -169,7 +171,8 @@ html {
 
 .dropdown-content a:hover {
   background-color: #555;
-  color: rgb(139, 166, 255);
+  color: rgb(22, 60, 185);
+  text-shadow: 0 0 4px rgba(22, 60, 185, 0.247), 0 0 10px rgba(22, 60, 185, 0.212);
 }
 
 .dropdown:hover .dropdown-content {
@@ -260,14 +263,14 @@ html {
   top: 23%;
   left: 9%;
   right: 12%;
-  color: rgba(0, 255, 255, 0.8);
+  color: rgba(88, 247, 247, 0.8);
 }
 
 .text h1 {
   top: 83%;
   position: relative;
   font-size: 60px;
-  text-shadow: 0 0 10px #00ffffcc, 0 0 20px #00ffffcc;
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
 }
 
 .text p {
@@ -275,5 +278,5 @@ html {
   top: 83%;
   position: relative;
   font-size: 30px;
-  text-shadow: 0 0 10px #00ffffcc, 0 0 20px #00ffffcc;
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
 }
