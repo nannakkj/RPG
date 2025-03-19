@@ -251,6 +251,12 @@ body {
     font-size: 2rem;
   }
 
+  .text h3 {
+    position: static;
+    font-size: 1rem;
+    left: 122vh;
+  }
+
   .text p {
     font-size: 1rem;
     left: 0;
@@ -263,4 +269,33 @@ body {
   .logo, .logo2 {
     height: 50px;
   }
+}
+
+.fbi {
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  max-width: 40vh;
+  max-height: 40vh;
+  z-index: -2;
+  max-width: 35vh;
+  max-height: 35vh;
+  opacity: .3; 
+  user-select: none;
+}
+
+.body-parts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.part {
+  flex: 1 1 200px; 
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.part h2, .part h3 {
+  margin: 5px 0;
 }

@@ -84,7 +84,7 @@ html {
   animation: pushScreen 0.1s ease-out;
 }
 .navbar {
-  height: 12vh;
+  height: 14vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,7 +134,7 @@ html {
 }
 
 .navlinks a:hover {
-  color: rgb(22, 60, 185);
+  color: rgb(112, 138, 224);
   text-shadow: 0 0 4px rgba(22, 60, 185, 0.247), 0 0 10px rgba(22, 60, 185, 0.212);
 }
 
@@ -172,7 +172,7 @@ html {
 
 .dropdown-content a:hover {
   background-color: #555;
-  color: rgb(22, 60, 185);
+  color: rgb(112, 138, 224);
   text-shadow: 0 0 4px rgba(22, 60, 185, 0.247), 0 0 10px rgba(22, 60, 185, 0.212);
 }
 
@@ -266,16 +266,16 @@ html {
 }
 
 .text h1{
-  color: rgba(88, 247, 247, 0.8);
-  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
+  color: rgb(79, 198, 228);
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #0f83b9c7;
   font-size: 60px;
   margin-bottom: 0px;
 }
 .text h2{
 position: relative;
 left: 20px;
-color: rgba(88, 247, 247, 0.8);
-text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
+color: rgb(79, 198, 228);
+text-shadow: 0 0 10px #00ffffcc, 0 0 2px #0f83b9c7;
 font-size: 45px;
 margin-bottom: 0px;
 margin-top: 15px;
@@ -285,8 +285,8 @@ margin-top: 15px;
 margin-top: 5px;
 position: relative;
 left: 30px;
-color: rgba(88, 247, 247, 0.8);
-text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
+color: rgb(79, 198, 228);
+text-shadow: 0 0 10px #00ffffcc, 0 0 2px #0f83b9c7;
 font-size: 30px;
 margin-bottom: 0px;
 }
@@ -294,8 +294,7 @@ margin-bottom: 0px;
 
 .text p {
   position: relative;
-  color: rgb(237, 245, 252);
-  color: rgba(88, 247, 247, 0.8);
+  color: rgb(223, 255, 244);
   text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
   font-size: 25px;
   left: 40px;
@@ -306,7 +305,7 @@ margin-bottom: 0px;
 .text span {
 margin-top: 5px;
 position: relative;
-color: rgba(88, 247, 247, 0.8);
+color: rgb(223, 255, 244);
 text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
 font-size: 25px;
 left: 40px;
