@@ -127,6 +127,8 @@ body {
   height: 100%;
   width: auto;
 }
+
+/* Estilos do texto (restaurados) */
 .text {
   position: absolute;
   left: 9%;
@@ -181,6 +183,7 @@ body {
 .text br {
   user-select: none;
 }
+
 /* Responsividade */
 @media (max-width: 1200px) {
   .navlinks a, .navlinks span {
@@ -190,15 +193,10 @@ body {
   .logo, .logo2 {
     height: 80px;
   }
-}
 
-@media (max-width: 992px) {
-  .navbar {
-    justify-content: space-around;
-    padding: 10px 2%;
-  }
-  
+  /* Esconde os links normais e mostra o menu hamburger */
   .navlinks {
+    display: none; /* Esconde os links */
     position: fixed;
     top: 12vh;
     left: -100%;
@@ -207,16 +205,17 @@ body {
     background-color: #333;
     width: 100%;
     padding: 20px 0;
+    transition: all 0.3s ease;
   }
-  
+
   .navlinks.active {
-    left: 0;
+    left: 0; /* Mostra o menu quando ativo */
   }
-  
+
   .menu-toggle {
-    display: block;
+    display: block; /* Mostra o ícone do hamburger */
   }
-  
+
   .dropdown-content {
     position: static;
     display: none;
@@ -226,44 +225,41 @@ body {
     transform: none;
     left: 0;
   }
-  
+
   .dropdown:hover .dropdown-content,
   .dropdown.active .dropdown-content {
     display: block;
   }
-  
-  .logo, .logo2 {
-    height: 60px;
-  }
 }
 
+/* Ajustes para telas menores */
 @media (max-width: 576px) {
   .navbar {
     padding: 10px 2%;
   }
-  
+
   .text {
     left: 5%;
     right: 5%;
   }
-  
+
   .text h1 {
     font-size: 2.5rem;
   }
-  
+
   .text h2 {
     font-size: 2rem;
   }
-  
+
   .text p {
     font-size: 1rem;
     left: 0;
   }
-  
+
   .navlinks a, .navlinks span {
     font-size: 1.5rem;
   }
-  
+
   .logo, .logo2 {
     height: 50px;
   }
