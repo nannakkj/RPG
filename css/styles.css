@@ -17,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 .navbar {
@@ -181,20 +182,29 @@ body {
   margin-bottom: 0px;
 }
 
-.text td{
-  position: relative;
-  color: #860101; /* Vermelho mais escuro */
-  font-size: 25px; /* Tamanho original */
-  left: 40px;
-  margin-bottom: 0px;
+.text ul {
+  list-style-type: none; /* Remove os marcadores padrão da lista */
+  padding: 0;
 }
-.text li{
+
+.text li {
   position: relative;
   color: #860101; /* Vermelho mais escuro */
   font-size: 25px; /* Tamanho original */
   left: 40px;
   list-style: none;
   margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.text li strong {
+  width: 250px; /* Largura fixa para os rótulos */
+  margin-right: 10px; /* Espaço entre o rótulo e os colchetes */
+}
+
+.text li::after {
+  content: "[ ]"; /* Adiciona os colchetes após cada item */
 }
 
 .text br {
