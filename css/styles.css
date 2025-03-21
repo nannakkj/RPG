@@ -198,6 +198,15 @@ body {
   align-items: center;
 }
 
+.text td {
+  position: relative;
+  color: #860101; /* Vermelho mais escuro */
+  font-size: 25px; /* Tamanho original */
+  left: 40px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
 .text li strong {
   width: 250px; /* Largura fixa para os rótulos */
   margin-right: 10px; /* Espaço entre o rótulo e os colchetes */
@@ -210,6 +219,11 @@ body {
 .text br {
   user-select: none;
 }
+
+.text hr {
+  color: #860101;
+}
+
 
 /* Responsividade */
 @media (max-width: 1200px) {
@@ -326,3 +340,54 @@ body {
 .part h2, .part h3 {
   margin: 5px 0;
 }
+
+
+.full-table {
+  margin: 30px 0;
+  overflow-x: auto;
+}
+
+.full-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid #e22d2d;
+}
+
+.full-table th, .full-table td {
+  padding: 15px;
+  border: 2px solid #860101;
+  color: #860101;
+  font-size: 22px;
+  vertical-align: top;
+}
+
+.full-table th {
+  text-align: center;
+}
+
+.difficulty-table {
+  margin-top: 40px;
+}
+
+.difficulty-table table {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.difficulty-table td {
+  padding: 12px;
+  border: 2px solid #e22d2d;
+  font-size: 20px;
+  color: #860101;
+  text-align: center;
+}
+
+.difficulty-table th {
+  padding: 12px;
+  border: 2px solid #e22d2d;
+  font-size: 20px;
+  color: #860101;
+  text-align: center;
+}
+

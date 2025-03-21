@@ -67,79 +67,153 @@
     </div>
   </nav>
 
-  <div class="text">
-    <h1>Tabela de Locais do Corpo e Dificuldade de Acerto</h1>
-<span>Neste sistema, o corpo é dividido em áreas específicas, cada uma com seus próprios efeitos e níveis de dificuldade para acertar. Diferente de uma barra de vida tradicional, os danos são aplicados diretamente aos locais atingidos, causando efeitos variados como incapacitação ou sangramento. A dificuldade para acertar cada local varia conforme o tamanho, a mobilidade e a importância da área. Os valores apresentados podem variar dependendo do contexto, mas seguem uma base para equilíbrio e consistência. Use essa tabela como referência para ataques, defesas e consequências de ferimentos.<br></span>
-
-<div class="body-parts">
-    <div class="part">
-        <h2>4 — Cabeça </h2>
-        <h3>5 — Olho</h3>
-        <h3>4 — Nariz</h3>
-        <h3>4 — Boca</h3>
-        <h3>6 — Pescoço</h3>
-    </div>
-    <div class="part">
-        <h2>1 — Tronco</h2>
-        <h3>2 — Peito</h3>
-        <h3>3 — Costas</h3>
-        <h3>2 — Abdômen</h3>
-    </div>
-    <div class="part">
-        <h2>2 — Braços</h2> 
-        <h3>3 — Mãos</h3> 
-        <h3>4 — Dedos mãos</h3>
-    </div>
-    <div class="part">
-        <h2>3 — Pernas</h2> 
-        <h3>4 — Pés</h3> 
-        <h3>5 — Dedos Pés</h3> 
-      </div>
-    </div>
-    <h1>Níveis de Dificuldade</h1>
+<div class="text">
+  <h1></h1>
+</div>
+<div class="part">
+  <div class="full-table">
     <table>
-      <tr>
-        <td>Fácil (1)</td>
-        <td>—</td>
-        <td>10</td>
-        <td>&nbsp;&nbsp;&nbsp;-</td>
-        <td>11+</td>
-      </tr>
-      <tr>
-        <td>Levemente Difícil (2)</td>
-        <td>—</td>
-        <td>12</td>
-        <td>&nbsp;&nbsp;&nbsp;-</td>
-        <td>13+</td>
-      </tr>
-      <tr>
-        <td>Moderado (3)</td>
-        <td>—</td>
-        <td>14</td>
-        <td>&nbsp;&nbsp;&nbsp;-</td>
-        <td>16+</td>
-      </tr>
-      <tr>
-        <td>Difícil (4)</td>
-        <td>—</td>
-        <td>—</td>
-        <td>&nbsp;&nbsp;&nbsp;-</td>
-        <td>17+</td>
-      </tr>
-      <tr>
-        <td>Muito Difícil (5)</td>
-        <td>—</td>
-        <td>18</td>
-        <td>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;</td>
-        <td>19+</td>
-      </tr>
-      <tr>
-        <td>Extremamente Difícil (6)&nbsp;&nbsp;&nbsp;</td>
-        <td> —&nbsp;&nbsp;&nbsp;  </td>
-        <td>—</td>
-        <td>&nbsp;&nbsp;&nbsp;-</td>
-        <td>20+</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Membro</th>
+          <th>Vida</th>
+          <th>Dificuldade</th>
+          <th>Efeitos de Dano</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cabeça</td>
+          <td>20</td>
+          <td>4</td>
+          <td>60%: Atordoado (-2 percepção)<br>25%: Confuso (-2 inteligência)<br>0%: Inconsciente<br>-100%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Olho</td>
+          <td>4</td>
+          <td>6</td>
+          <td>50%: Visão turva (-2 Testes de visão)<br>0%: Cegueira<br>-50%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Nariz</td>
+          <td>8</td>
+          <td>5</td>
+          <td>50%: Respiração difícil (-PT)<br>0%: Sangramento intenso (-Integridade)<br>-50%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Boca</td>
+          <td>10</td>
+          <td>5</td>
+          <td>20%: Dente perdido<br>0%: Incapacidade verbal(-1 Carisma)<br>Dente perdido a cada -10%</td>
+        </tr>
+        <tr>
+          <td>Pescoço</td>
+          <td>6</td>
+          <td>6</td>
+          <td>50%: Respiração ofegante(-PT)<br>0%: Sangramento grave (-Integridade)<br>-50%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Tronco</td>
+          <td>40</td>
+          <td>2</td>
+          <td>50%: Movimento limitado(-PT)<br>25%: Sangramento(-Integridade)<br>0%: Sangramento intenso interior(-Integridade)<br>-100%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Peito</td>
+          <td>30</td>
+          <td>3</td>
+          <td>50%: Dor contínua(-Integridade)<br>0%: Respiração extremamente fraca(-PT), (-Integridade)</td>
+        </tr>
+        <tr>
+          <td>Costas</td>
+          <td>30</td>
+          <td>4</td>
+          <td>20%: Danos na coluna(-PT)<br>-100%: Movimento das pernas perdido</td>
+        </tr>
+        <tr>
+          <td>Braços</td>
+          <td>17</td>
+          <td>2</td>
+          <td>50%: Força reduzida (-2 Força com o braço ferido)<br>0%: Inutilização<br>-50%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Mãos</td>
+          <td>10</td>
+          <td>3</td>
+          <td>50%: Precisão reduzida (-50% Precisão com a mão ferida)<br>0%: Incapacidade manual<br>-50%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Dedos</td>
+          <td>4</td>
+          <td>4</td>
+          <td>50%: Manipulação difícil(-20% Precisão com a mão ferida)<br>0%: Incapacidade/Fratura<br>-50%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Pernas</td>
+          <td>17</td>
+          <td>3</td>
+          <td>50%: (-2 Velocidade total)<br>0%: Inutilização<br>-50%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Pés</td>
+          <td>10</td>
+          <td>4</td>
+          <td>50%: Equilíbrio prejudicado(-1 Velocidade total)<br>0%: Incapacidade de andar<br>-50%: Membro perdido</td>
+        </tr>
+        <tr>
+          <td>Dedos Pés</td>
+          <td>2</td>
+          <td>5</td>
+          <td>50%: Dor ao mover (-Movimento)<br>0%: Incapacidade/Fratura<br>-50%: Membro perdido</td>
+        </tr>
+      </tbody>
     </table>
+  </div>
+</div>
+<div class="part">
+  <div class="difficulty-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Dificuldade</th>
+          <th colspan="5">DT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fácil (1)</td>
+          <td>10</td>
+          <td>11+</td>
+        </tr>
+        <tr>
+          <td>Levemente Difícil (2)</td>
+          <td>12</td>
+          <td>13+</td>
+        </tr>
+        <tr>
+          <td>Moderado (3)</td>
+          <td>14</td>
+          <td>16+</td>
+        </tr>
+        <tr>
+          <td>Difícil (4)</td>
+          <td colspan="2">17+</td>
+        </tr>
+        <tr>
+          <td>Muito Difícil (5)</td>
+          <td>18</td>
+          <td>19+</td>
+        </tr>
+        <tr>
+          <td>Extremamente Difícil (6)</td>
+          <td colspan="2">20+</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</span>
+</div>
+<br><br><br><br><br><br>
 </body>
 </html>
