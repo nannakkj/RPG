@@ -11,12 +11,13 @@ body::-webkit-scrollbar {
 
 body,
 html {
-  height: 1000%;
-  min-height: 100%;
+  height: auto;
+  min-height: 100vh;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  position: relative;
 }
 
 .background {
@@ -24,18 +25,20 @@ html {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  z-index: 2; /* Garante que está atrás do conteúdo */
 }
 
 .rain {
   position: fixed;
-  top: 0;
+  top: -100vh; /* Começa totalmente acima da tela */
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Altura igual à viewport */
   background: linear-gradient(transparent, rgba(0, 255, 255, 0.041));
-  animation: rainFall 2s linear infinite;
+  animation: rainFall 3s linear infinite; /* Animação mais lenta */
   z-index: 3;
-  user-select:none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .neon-lights {
@@ -50,6 +53,8 @@ html {
     transparent 70%
   );
   animation: neonPulse 2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .glitch-overlay {
@@ -67,6 +72,7 @@ html {
   );
   animation: staticNoise 0.1s infinite;
   pointer-events: none;
+  z-index: 4;
 }
 
 .glitch-overlay::after {
@@ -83,6 +89,7 @@ html {
 .push-effect {
   animation: pushScreen 0.1s ease-out;
 }
+
 .navbar {
   height: 14vh;
   display: flex;
@@ -138,7 +145,6 @@ html {
   text-shadow: 0 0 4px rgba(22, 60, 185, 0.247), 0 0 10px rgba(22, 60, 185, 0.212);
 }
 
-/* Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -180,7 +186,6 @@ html {
   display: block;
 }
 
-/* Estilo para as imagens */
 .imagenscontainer {
   height: 100%;
   display: flex;
@@ -189,9 +194,9 @@ html {
 }
 
 .imagens {
-  max-height: 80vh; /* Usando unidades relativas */
+  max-height: 80vh;
   margin: 50px 20px;
-  height: auto; /* Garante que a imagem se ajuste ao tamanho da tela */
+  height: auto;
 }
 
 .logo,
@@ -200,7 +205,6 @@ html {
   top: 1vh;
   font-size: 2.4vh;
   font-weight: bold;
-  user-select: none;
   z-index: 100000;
 }
 
@@ -210,14 +214,13 @@ html {
 
 @keyframes rainFall {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(0);
   }
-  10000000% {
-    transform: translateY(100%);
+  100% {
+    transform: translateY(200vh); /* Desce 2x a altura da tela */
   }
 }
 
-/* Pulsação das luzes néon */
 @keyframes neonPulse {
   0%,
   100% {
@@ -228,7 +231,6 @@ html {
   }
 }
 
-/* Efeito de estática (ruído) */
 @keyframes staticNoise {
   0% {
     transform: translateY(0);
@@ -238,7 +240,6 @@ html {
   }
 }
 
-/* Efeito de glitch */
 @keyframes glitch {
   0%,
   100% {
@@ -259,38 +260,45 @@ html {
 }
 
 .text {
-  position: absolute;
+  position: relative;
   left: 9%;
   right: 12%;
   margin-bottom: 0px;
+  user-select: text;
+  z-index: 9999;
+  margin-top: 20vh; /* Espaço para o cabeçalho */
+  padding-bottom: 50vh; /* Espaço para rolagem */
 }
 
-.text h1{
+.text h1 {
   color: rgb(79, 198, 228);
   text-shadow: 0 0 10px #00ffffcc, 0 0 2px #0f83b9c7;
   font-size: 60px;
   margin-bottom: 0px;
-}
-.text h2{
-position: relative;
-left: 20px;
-color: rgb(79, 198, 228);
-text-shadow: 0 0 10px #00ffffcc, 0 0 2px #0f83b9c7;
-font-size: 45px;
-margin-bottom: 0px;
-margin-top: 15px;
+  user-select: text;
 }
 
-.text h3{
-margin-top: 5px;
-position: relative;
-left: 30px;
-color: rgb(79, 198, 228);
-text-shadow: 0 0 10px #00ffffcc, 0 0 2px #0f83b9c7;
-font-size: 30px;
-margin-bottom: 0px;
+.text h2 {
+  position: relative;
+  left: 20px;
+  color: rgb(79, 198, 228);
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #0f83b9c7;
+  font-size: 45px;
+  margin-bottom: 0px;
+  margin-top: 15px;
+  user-select: text;
 }
 
+.text h3 {
+  margin-top: 5px;
+  position: relative;
+  left: 30px;
+  color: rgb(79, 198, 228);
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #0f83b9c7;
+  font-size: 30px;
+  margin-bottom: 0px;
+  user-select: text;
+}
 
 .text p {
   position: relative;
@@ -300,18 +308,82 @@ margin-bottom: 0px;
   left: 40px;
   margin-bottom: 0px;
   margin-top: 5px;
+  user-select: text;
 }
 
 .text span {
-margin-top: 5px;
-position: relative;
-color: rgb(223, 255, 244);
-text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
-font-size: 25px;
-left: 40px;
-margin-bottom: 0px;
+  margin-top: 5px;
+  position: relative;
+  color: rgb(223, 255, 244);
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
+  font-size: 25px;
+  left: 40px;
+  margin-bottom: 0px;
+  user-select: text;
 }
 
-.text br  {
-user-select: none;
+.text br {
+  user-select: none;
+}
+
+.body-parts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.part {
+  flex: 1 1 200px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.part h2,
+.part h3 {
+  margin: 5px 0;
+}
+
+.difficulty-table {
+  margin-top: 40px;
+  z-index: 9999;
+}
+
+.difficulty-table {
+  margin-top: 40px;
+  z-index: 9999;
+}
+
+
+.difficulty-table table {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 4%;
+  border-collapse: collapse;
+  z-index: 9999;
+}
+
+.difficulty-table td {
+  padding: 12px;
+  border: 2px solid rgb(89, 207, 236);
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
+  font-size: 20px;
+  color: rgb(223, 255, 244);
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
+  text-align: center;
+  background-color: rgba(0, 0, 58, 0.671);
+  z-index: 99999;
+}
+
+.difficulty-table th {
+  padding: 12px;
+  border: 2px solid rgb(89, 207, 236);
+  font-size: 20px;
+  color: rgb(223, 255, 244);
+  text-shadow: 0 0 10px #00ffffcc, 0 0 2px #00ffffcc;
+  text-align: center;
+  background-color: rgba(0, 0, 58, 0.671);
+  z-index: 99999;
+}
+
+.color {
+  background-color: rgb(252, 208, 172);
 }

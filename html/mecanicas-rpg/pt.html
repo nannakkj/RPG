@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Inicio</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" type="image/png" href="/Imagens/logo.png" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/index.html">
+        <img src="/Imagens/logo.png" height="100px" alt="Logo" />
+      </a>
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <ul class="navlinks">
+      <li class="dropdown">
+        <span>Info</span>
+        <ul class="dropdown-content">
+          <li><a href="/html/mecanicas/intro.html">Introduções ao Site</a></li>
+          <li><a href="/html/mecanicas/patchs.html">Patchs de Att</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+
+        <a href="/html/ficha.html">Ficha</a>
+        <ul class="dropdown-content">
+          <li><a href="/html/ficha/fichaplayer.html">Ficha Player</a></li>
+        <li><a href="/html/fichad.html">Ficha Download</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+      <a href="/html/racas/racas.html">Raça</a>
+        <ul class="dropdown-content">
+          <li><a href="/html/racas/todasr.html">Todas</a></li>
+          <li><a href="/html/racas/aharu.html">Aharu</a></li>
+          <li><a href="/html/racas/fading.html">Fading</a></li>
+          <li><a href="/html/racas/Furyes.html">Furyes</a></li>
+          <li><a href="/html/racas/humano.html">Humanos</a></li>
+          <li><a href="/html/racas/Kinilirianos.html">Kinilirianos</a></li>
+          <li><a href="/html/racas/mansoon.html">Mansoons</a></li>
+          <li><a href="/html/racas/perola.html">Pérolas</a></li>
+          <li><a href="/html/racas/vaels.html">Vaels</a></li>
+          <li><a href="/html/racas/xark.html">Xharr'kai</a></li>
+        </ul>
+      </li>
+        
+      <li class="dropdown">  
+        <a href="/html/classes/classes.html">Classes</a>
+        <ul class="dropdown-content">
+          <li><a href="/html/classes/cyber-c.html">CyberPunk</a></li>
+          <li><a href="/html/classes/medieval-c.html">Medieval</a></li>
+          <li><a href="/html/classes/militar-c.html">Militar</a></li>
+          <li><a href="/html/classes/misc-c.html">Miscc</a></li>
+        </ul>
+      </li>
+      <a href="mecanicas">Mecânicas</a>
+      <li><a href="/html/mecanicas-rpg/dados.html"></a></li>
+    </ul>
+
+    <div class="logo2">
+      <a href="#">
+        <img src="/Imagens/logo.png" height="100px" alt="Logo" />
+      </a>
+    </div>
+  </nav>
+
+  <div class="text">
+    <div>
+      <h1>O Que São Pontos de Ação (PA)?</h1>
+      <p>
+        Imagine um campo de batalha onde cada decisão é crucial, cada movimento pode mudar o rumo da história, e cada ação é uma peça em um jogo de estratégia infinita. Os Pontos de Ação (PA) são o coração pulsante desse sistema, a essência que transforma seus pensamentos em atos heroicos ou táticos magistrais. <br><br>
+
+        PA são a moeda que alimenta suas escolhas em combate. Eles definem quanto você pode fazer em um único turno, desde desferir golpes devastadores até lançar feitiços que alteram a realidade. Quer você seja um guerreiro que avança sem medo, um mago que tece magias poderosas, ou um ladino que dança nas sombras, seus PA são o recurso que separa a vitória gloriosa da derrota amarga.<br><br>
+        
+        Mas cuidado! Gerenciar seus PA é uma arte. A cada rodada, você pode gastar todos os seus PA, mas se sobrar algum, eles não são perdidos – na verdade, podem ser acumulados para o próximo turno, até um limite de 150% do seu total padrão. Por exemplo, se você tem 10 PA e não usa nenhum, no próximo turno terá 15 PA à disposição. Isso abre um leque de possibilidades estratégicas: você pode economizar para um ataque arrasador ou usar tudo de uma vez para uma jogada surpresa, seus pontos "recarregam" apenas quando começa o seu turno.<br><br>
+        
+        O padrão de PA é 12, mas isso pode variar conforme sua classe, habilidades e itens. Quer você seja um mestre da economia ou um amante do risco, seus PA são a chave para dominar o campo de batalha.
+      </p>
+      <h1>Padrões</h1>
+      <p>
+        Sacar/Pegar Objeto (3 PA).<br><br>
+
+        Defesa/Esquiva (3 PA).<br>
+
+        Contrataque (2 PA + PA da Ação).<br><br>
+
+        Recarregar (4).<br><br>
+
+        Interagir com Ambiente (3 PA – abrir portas, puxar alavancas, etc.).<br><br>
+
+        Preparar Ação (2 PA + PA da Ação – guarda uma ação para usar no turno de outro personagem).<br><br>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navlinks = document.querySelector('.navlinks');
+      navlinks.classList.toggle('active');
+      
+      // Fecha dropdowns abertos
+      document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+        dropdown.style.display = 'none';
+      });
+    }
+
+    // Adiciona interação para dropdowns em mobile
+    document.querySelectorAll('.dropdown > span, .dropdown > a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const dropdown = this.parentElement.querySelector('.dropdown-content');
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

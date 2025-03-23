@@ -111,7 +111,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #555;
+  background-color: #00000036;
   color: #ff628a;
 }
 
@@ -370,6 +370,7 @@ body {
 }
 
 .difficulty-table table {
+  background-color: rgba(209, 103, 3, 0.151);
   width: 60%;
   margin: 0 auto;
   border-collapse: collapse;
@@ -391,3 +392,6 @@ body {
   text-align: center;
 }
 
+.color {
+  background-color: rgba(255, 138, 42, 0.459);
+}
