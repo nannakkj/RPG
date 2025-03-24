@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 
 
   body{
-    background-color: rgb(17, 22, 102);
+    background-color: #111666;
     background-size: cover;
     background-repeat: repeat-y;
     background-size: 100% auto;
@@ -294,4 +294,45 @@ body::-webkit-scrollbar {
 
 .color {
   background-color: rgb(252, 208, 172);
+}
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.hover-image {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  height: 150px;
+  width: auto;
+  margin-top: 10px;
+  user-select: none;
+  z-index: 909999999999999999999999;
+  border: solid rgb(224, 158, 34);
+  border-radius: 20px;
+  border-width: 4px;
+}
+
+
+
+.hover-container:hover .hover-image {
+  display: block;
+  animation: slidein .4s 1, opa .8s 1;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+    height: 100%;
+  }
+}
+@keyframes opa{
+  from {
+    opacity: .2;
+  }
 }
