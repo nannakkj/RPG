@@ -1,210 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>Inicio</title>
-    <link rel="stylesheet" href="Rpgcss/styles.css" />
-    <link rel="icon" type="image/png" href="RpgImagens/logo.png" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Inicio</title>
+  <link rel="stylesheet" href="Rpg/css/styles.css" />
+  <link rel="icon" type="image/png" href="Rpg/Imagens/logo.png" />
+</head>
 
-  <body>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="Rpgindex.html">
-          <img src="RpgImagens/logo.png" height="100px" alt="Logo" />
-        </a>
-      </div>
-
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-      <ul class="navlinks">
-        <li class="dropdown">
-          <span>Info</span>
-          <ul class="dropdown-content">
-            <li>
-              <a href="Rpghtml/mecanicas/intro.html">Introduções ao Site</a>
-            </li>
-            <li><a href="Rpghtml/mecanicas/patchs.html">Patchs de Att</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="Rpghtml/ficha/ficha.html">Ficha</a>
-          <ul class="dropdown-content">
-            <li><a href="Rpghtml/ficha/fichaplayer.html">Ficha Player</a></li>
-            <li><a href="Rpghtml/ficha/fichanpc.html">Ficha Npc</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="Rpghtml/racas/racas.html">Raça</a>
-          <ul class="dropdown-content">
-            <li><a href="Rpghtml/racas/todasr.html">Todas</a></li>
-            <li><a href="Rpghtml/racas/aharu.html">Aharu</a></li>
-            <li><a href="Rpghtml/racas/fading.html">Fading</a></li>
-            <li><a href="Rpghtml/racas/Furyes.html">Furyes</a></li>
-            <li><a href="Rpghtml/racas/humano.html">Humanos</a></li>
-            <li><a href="Rpghtml/racas/Kinilirianos.html">Kinilirianos</a></li>
-            <li><a href="Rpghtml/racas/mansoon.html">Mansoons</a></li>
-            <li><a href="Rpghtml/racas/perola.html">Pérolas</a></li>
-            <li><a href="Rpghtml/racas/vaels.html">Vaels</a></li>
-            <li><a href="Rpghtml/racas/xark.html">Xharr'kai</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="Rpghtml/classes/classes.html">Classes</a>
-          <ul class="dropdown-content">
-            <li><a href="Rpghtml/classes/cyber-c.html">CyberPunk</a></li>
-            <li><a href="Rpghtml/classes/medieval-c.html">Medieval</a></li>
-            <li><a href="Rpghtml/classes/militar-c.html">Militar</a></li>
-            <li><a href="Rpghtml/classes/misc-c.html">Miscc</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="Rpghtml/sistemasdepoder/sispower.html">Poderes</a>
-          <ul class="dropdown-content">
-            <li>
-              <a href="Rpghtml/sistemasdepoder/Alquimia.html">Alquimia</a>
-            </li>
-            <li>
-              <a href="Rpghtml/sistemasdepoder/artefator.html">Artefatos</a>
-            </li>
-            <li><a href="Rpghtml/sistemasdepoder/bencao.html">Benção</a></li>
-            <li><a href="Rpghtml/sistemasdepoder/kraska.html">Kraska</a></li>
-            <li><a href="Rpghtml/sistemasdepoder/marcas.html">Marcas</a></li>
-            <li>
-              <a href="Rpghtml/sistemasdepoder/Minarquia.html">Minarquia</a>
-            </li>
-            <li>
-              <a href="Rpghtml/sistemasdepoder/sabi.html">Sabi's & Wabi's</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="Rpghtml/racas/racas.html">Armas</a>
-          <ul class="dropdown-content">
-            <li><a href="Rpghtml/arma/cyber-a.html">Cyberpunk</a></li>
-            <li><a href="Rpghtml/arma/medieval-a.html">Medieval</a></li>
-            <li><a href="Rpghtml/arma/militar-a.html">Militar</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="mecanicas">Mecânicas</a>
-          <ul class="dropdown-content">
-            <li><a href="Rpghtml/mecanicas-rpg/dano.html">Membro/Mira</a></li>
-            <li><a href="Rpghtml/mecanicas-rpg/pt.html">PA</a></li>
-            <li><a href="Rpghtml/mecanicas-rpg/dados.html">Dados</a></li>
-            <li>
-              <a href="Rpghtml/mecanicas-rpg/cyber-mecanicas.html"
-                >Mecanicas Cyberneticas</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <div class="logo2">
-        <a href="#">
-          <img src="RpgImagens/logo.png" height="100px" alt="Logo" />
-        </a>
-      </div>
-    </nav>
-
-    <div class="text">
-      <div>
-        <!--* Bem vindos-->
-        <h1>Bem-vindo á Radiância!</h1>
-        <p>
-          Este é o seu portal oficial para explorar as regras, mecânicas e o
-          universo de Radiância, um sistema criado para ser versátil, simples e
-          libertador. Se você é um Mestre do Jogo que sempre sonhou em criar
-          aventuras únicas, em qualquer cenário, sem se prender a regras rígidas
-          ou sistemas específicos, este RPG foi feito para você. E se você é um
-          jogador em busca de experiências memoráveis e cheias de liberdade,
-          prepare-se para mergulhar em um mundo onde suas escolhas moldam o
-          destino.
-        </p>
-        <p>
-          O RPG Radiância nasceu da frustração de sistemas limitados e da
-          vontade de oferecer uma ferramenta que permita aos mestres criarem o
-          que quiserem, onde quiserem. No vasto mundo da Radiância, você pode
-          dar vida às suas ideias mais ousadas, seja uma campanha épica em
-          reinos fantásticos, uma investigação sombria em uma cidade cyberpunk,
-          ou uma jornada surreal em dimensões/Planos desconhecidas. Aqui, a
-          única limitação é a sua imaginação.
-        </p>
-        <p>
-          O sistema foi projetado para ser extremamente simples, mas ao mesmo
-          tempo profundo o suficiente para suportar narrativas complexas e
-          personagens únicos. Com regras intuitivas e mecânicas flexíveis, você
-          pode focar no que realmente importa: contar histórias incríveis e
-          proporcionar experiências inesquecíveis para seus jogadores.
-        </p>
-      </div>
-      <div>
-        <!--* O Que é um RPG?-->
-        <h2>O Que é um RPG?</h2>
-        <p>
-          Um RPG, ou Role-Playing Game (Jogo de Interpretação de Papéis), é uma
-          experiência colaborativa onde os jogadores assumem o papel de
-          personagens em um mundo imaginário, criado e guiado por um narrador,
-          também conhecido como Mestre do Jogo. Diferente de jogos tradicionais,
-          o RPG não tem um vencedor ou perdedor; o objetivo principal é contar
-          uma história coletiva, repleta de desafios, escolhas e consequências.
-        </p>
-
-        <p>
-          Neste jogo, os participantes criam personagens únicos, com
-          habilidades, personalidades e histórias próprias. O Mestre do Jogo é
-          responsável por descrever o cenário, interpretar os personagens não
-          jogáveis (NPCs) e apresentar os desafios que os jogadores enfrentarão.
-          As ações dos personagens são decididas pelos jogadores, e os
-          resultados são determinados por regras específicas, muitas vezes
-          utilizando dados para introduzir um elemento de aleatoriedade e
-          emoção.
-        </p>
-
-        <p>
-          O RPG é uma mistura de teatro improvisado, estratégia e narrativa. Ele
-          permite que os jogadores explorem mundos fantásticos, vivam aventuras
-          épicas e tomem decisões que moldam o destino de seus personagens e do
-          mundo ao seu redor. A liberdade criativa é ilimitada, e cada sessão de
-          RPG é uma experiência única, moldada pela imaginação e colaboração de
-          todos os envolvidos.
-        </p>
-      </div>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="Rpg/index.html">
+        <img src="Rpg/Imagens/logo.png" height="100px" alt="Logo" />
+      </a>
     </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <ul class="navlinks">
+      <li class="dropdown">
+        <span>Info</span>
+        <ul class="dropdown-content">
+          <li><a href="Rpg/html/mecanicas/intro.html">Introduções ao Site</a></li>
+          <li><a href="Rpg/html/mecanicas/patchs.html">Patchs de Att</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
 
-    <script>
-      function toggleMenu() {
-        const navlinks = document.querySelector(".navlinks");
-        navlinks.classList.toggle("active");
+        <a href="Rpg/html/ficha/ficha.html">Ficha</a>
+        <ul class="dropdown-content">
+          <li><a href="Rpg/html/ficha/fichaplayer.html">Ficha Player</a></li>
+        <li><a href="Rpg/html/ficha/fichanpc.html">Ficha Npc</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+      <a href="Rpg/html/racas/racas.html">Raça</a>
+        <ul class="dropdown-content">
+          <li><a href="Rpg/html/racas/todasr.html">Todas</a></li>
+          <li><a href="Rpg/html/racas/aharu.html">Aharu</a></li>
+          <li><a href="Rpg/html/racas/fading.html">Fading</a></li>
+          <li><a href="Rpg/html/racas/Furyes.html">Furyes</a></li>
+          <li><a href="Rpg/html/racas/humano.html">Humanos</a></li>
+          <li><a href="Rpg/html/racas/Kinilirianos.html">Kinilirianos</a></li>
+          <li><a href="Rpg/html/racas/mansoon.html">Mansoons</a></li>
+          <li><a href="Rpg/html/racas/perola.html">Pérolas</a></li>
+          <li><a href="Rpg/html/racas/vaels.html">Vaels</a></li>
+          <li><a href="Rpg/html/racas/xark.html">Xharr'kai</a></li>
+        </ul>
+      </li>
+        
+      <li class="dropdown">  
+        <a href="Rpg/html/classes/classes.html">Classes</a>
+        <ul class="dropdown-content">
+          <li><a href="Rpg/html/classes/cyber-c.html">CyberPunk</a></li>
+          <li><a href="Rpg/html/classes/medieval-c.html">Medieval</a></li>
+          <li><a href="Rpg/html/classes/militar-c.html">Militar</a></li>
+          <li><a href="Rpg/html/classes/misc-c.html">Miscc</a></li>
+        </ul>
+      </li>
 
-        // Fecha dropdowns abertos
-        document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
-          dropdown.style.display = "none";
-        });
-      }
+      <li class="dropdown">  
+        <a href="Rpg/html/sistemasdepoder/sispower.html">Poderes</a>
+        <ul class="dropdown-content">
+          <li><a href="Rpg/html/sistemasdepoder/Alquimia.html">Alquimia</a></li>
+          <li><a href="Rpg/html/sistemasdepoder/artefator.html">Artefatos</a></li>
+          <li><a href="Rpg/html/sistemasdepoder/bencao.html">Benção</a></li>
+          <li><a href="Rpg/html/sistemasdepoder/kraska.html">Kraska</a></li>
+          <li><a href="Rpg/html/sistemasdepoder/marcas.html">Marcas</a></li>
+          <li><a href="Rpg/html/sistemasdepoder/Minarquia.html">Minarquia</a></li>
+          <li><a href="Rpg/html/sistemasdepoder/sabi.html">Sabi's & Wabi's</a></li>
+        </ul>
+      </li>
 
-      // Adiciona interação para dropdowns em mobile
-      document
-        .querySelectorAll(".dropdown > span, .dropdown > a")
-        .forEach((item) => {
-          item.addEventListener("click", function (e) {
-            if (window.innerWidth <= 992) {
-              e.preventDefault();
-              const dropdown =
-                this.parentElement.querySelector(".dropdown-content");
-              dropdown.style.display =
-                dropdown.style.display === "block" ? "none" : "block";
-            }
-          });
-        });
-    </script>
-  </body>
+      <li class="dropdown">
+        <a href="Rpg/html/racas/racas.html">Armas</a>
+          <ul class="dropdown-content">
+            <li><a href="Rpg/html/arma/cyber-a.html">Cyberpunk</a></li>
+            <li><a href="Rpg/html/arma/medieval-a.html">Medieval</a></li>
+            <li><a href="Rpg/html/arma/militar-a.html">Militar</a></li>
+
+          </ul>
+        </li>
+    <li class="dropdown">
+      <a href="mecanicas">Mecânicas</a>
+      <ul class="dropdown-content">
+      <li><a href="Rpg/html/mecanicas-rpg/dano.html">Membro/Mira</a></li>
+      <li><a href="Rpg/html/mecanicas-rpg/pt.html">PA</a></li>
+      <li><a href="Rpg/html/mecanicas-rpg/dados.html">Dados</a></li>
+      <li><a href="Rpg/html/mecanicas-rpg/cyber-mecanicas.html">Mecanicas Cyberneticas</a></li>
+    </ul>
+  </li>
+    </ul>
+
+    <div class="logo2">
+      <a href="#">
+        <img src="Rpg/Imagens/logo.png" height="100px" alt="Logo" />
+      </a>
+    </div>
+  </nav>
+
+  <div class="text">
+    <div><!--* Bem vindos--> 
+      <h1>Bem-vindo á Radiância!</h1>
+      <p>
+        Este é o seu portal oficial para explorar as regras, mecânicas e o universo de Radiância, um sistema criado para ser versátil, simples e libertador. Se você é um Mestre do Jogo que sempre sonhou em criar aventuras únicas, em qualquer cenário, sem se prender a regras rígidas ou sistemas específicos, este RPG foi feito para você. E se você é um jogador em busca de experiências memoráveis e cheias de liberdade, prepare-se para mergulhar em um mundo onde suas escolhas moldam o destino.
+      </p>
+      <p>
+        O RPG Radiância nasceu da frustração de sistemas limitados e da vontade de oferecer uma ferramenta que permita aos mestres criarem o que quiserem, onde quiserem. No vasto mundo da Radiância, você pode dar vida às suas ideias mais ousadas, seja uma campanha épica em reinos fantásticos, uma investigação sombria em uma cidade cyberpunk, ou uma jornada surreal em dimensões/Planos desconhecidas. Aqui, a única limitação é a sua imaginação.
+      </p>
+      <p>
+        O sistema foi projetado para ser extremamente simples, mas ao mesmo tempo profundo o suficiente para suportar narrativas complexas e personagens únicos. Com regras intuitivas e mecânicas flexíveis, você pode focar no que realmente importa: contar histórias incríveis e proporcionar experiências inesquecíveis para seus jogadores.
+      </p>
+    </div>
+    <div><!--* O Que é um RPG?-->
+      <h2>O Que é um RPG?</h2>
+      <p>
+        Um RPG, ou Role-Playing Game (Jogo de Interpretação de Papéis), é uma
+        experiência colaborativa onde os jogadores assumem o papel de
+        personagens em um mundo imaginário, criado e guiado por um narrador,
+        também conhecido como Mestre do Jogo. Diferente de jogos
+        tradicionais, o RPG não tem um vencedor ou perdedor; o objetivo
+        principal é contar uma história coletiva, repleta de desafios,
+        escolhas e consequências.
+      </p>
+
+      <p>
+        Neste jogo, os participantes criam personagens únicos, com
+        habilidades, personalidades e histórias próprias. O Mestre do Jogo é
+        responsável por descrever o cenário, interpretar os personagens não
+        jogáveis (NPCs) e apresentar os desafios que os jogadores enfrentarão.
+        As ações dos personagens são decididas pelos jogadores, e os
+        resultados são determinados por regras específicas, muitas vezes
+        utilizando dados para introduzir um elemento de aleatoriedade e
+        emoção.
+      </p>
+
+      <p>
+        O RPG é uma mistura de teatro improvisado, estratégia e narrativa. Ele
+        permite que os jogadores explorem mundos fantásticos, vivam aventuras
+        épicas e tomem decisões que moldam o destino de seus personagens e do
+        mundo ao seu redor. A liberdade criativa é ilimitada, e cada sessão de
+        RPG é uma experiência única, moldada pela imaginação e colaboração de
+        todos os envolvidos.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navlinks = document.querySelector('.navlinks');
+      navlinks.classList.toggle('active');
+      
+      // Fecha dropdowns abertos
+      document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+        dropdown.style.display = 'none';
+      });
+    }
+
+    // Adiciona interação para dropdowns em mobile
+    document.querySelectorAll('.dropdown > span, .dropdown > a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const dropdown = this.parentElement.querySelector('.dropdown-content');
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+  </script>
+</body>
 </html>
