@@ -69,7 +69,7 @@
           <li><a href="./html/sistemasdepoder/bencao.html">Benção</a></li>
           <li><a href="./html/sistemasdepoder/kraska.html">Kraska</a></li>
           <li><a href="./html/sistemasdepoder/marcas.html">Marcas</a></li>
-          <li><a href="./html/sistemasdepoder/Minarquia.html">Minarquia</a></li>
+          <li><a href="./html/sistemasdepoder/Minarquia.html">Minar</a></li>
           <li><a href="./html/sistemasdepoder/sabi.html">Sabi's & Wabi's</a></li>
         </ul>
       </li>
@@ -158,26 +158,29 @@
   </div>
 
   <script>
-    function toggleMenu() {
-      const navlinks = document.querySelector('.navlinks');
-      navlinks.classList.toggle('active');
-      
-      // Fecha dropdowns abertos
-      document.querySelectorAll('.dropdown-content').forEach(dropdown => {
-        dropdown.style.display = 'none';
-      });
-    }
+function toggleMenu() {
+  const navlinks = document.querySelector('.navlinks');
+  navlinks.classList.toggle('active');
+}
 
-    // Adiciona interação para dropdowns em mobile
-    document.querySelectorAll('.dropdown > span, .dropdown > a').forEach(item => {
-      item.addEventListener('click', function(e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          const dropdown = this.parentElement.querySelector('.dropdown-content');
-          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+// Fechar dropdowns quando o menu hamburguer é clicado
+document.querySelectorAll('.dropdown > span, .dropdown > a').forEach(item => {
+  item.addEventListener('click', function(e) {
+    if (window.innerWidth <= 992) {
+      const dropdown = this.parentElement.querySelector('.dropdown-content');
+      dropdown.classList.toggle('show');
+      
+      // Fechar outros dropdowns abertos
+      document.querySelectorAll('.dropdown-content').forEach(otherDropdown => {
+        if (otherDropdown !== dropdown) {
+          otherDropdown.classList.remove('show');
         }
       });
-    });
+      
+      e.preventDefault();
+    }
+  });
+});
   </script>
 </body>
 </html>
