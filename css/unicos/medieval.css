@@ -305,3 +305,100 @@ user-select: none;
 .color {
   background-color: rgb(252, 208, 172);
 }
+
+
+@media (max-width: 1200px) {
+  .navlinks a, .navlinks span {
+    font-size: 1.8rem;
+  }
+  
+  .logo, .logo2 {
+    height: 80px;
+  }
+
+  /* Menu hambúrguer */
+  .navlinks {
+    position: fixed;
+    top: 12vh;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+
+  .navlinks.active {
+    height: 88vh;
+    padding: 20px 0;
+    overflow-y: auto;
+  }
+
+  .navlinks li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Dropdowns em mobile */
+  .dropdown-content {
+    position: static;
+    display: none;
+    background-color: #444;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .dropdown-content.show {
+    display: block;
+  }
+
+  .dropdown > span::after, 
+  .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.8em;
+  }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px 2%;
+  }
+
+  .text {
+    left: 5%;
+    right: 5%;
+    margin-top: 15px;
+  }
+
+  .text h1 {
+    font-size: 2.5rem;
+  }
+
+  .text h2 {
+    font-size: 2rem;
+    left: 10px;
+  }
+
+  .text p, .text li, .text td {
+    font-size: 1rem;
+    left: 10px;
+  }
+
+  .navlinks a, .navlinks span {
+    font-size: 1.5rem;
+  }
+
+  .logo, .logo2 {
+    height: 50px;
+  }
+}
